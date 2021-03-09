@@ -1,8 +1,3 @@
-<?php
-// Import du fichier exemple :
-require_once('php/test.php');
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -19,9 +14,5 @@ require_once('php/test.php');
         <h1>
             <?php echo "Coucou"; ?>
         </h1>
-
-        <p>
-            <?php ditBonjour(); ?>
-        </p>
     </body>
 </html>
