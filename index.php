@@ -12,7 +12,7 @@
 
     <body>
         <h1>
-            <?php echo "Coucou"; ?>
+            <?php echo "Coucou" . (isset($_GET['prenom']) ? ' ' . $_GET['prenom'] : '') . ' !'; ?>
         </h1>
     </body>
 </html>
