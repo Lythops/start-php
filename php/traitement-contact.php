@@ -6,7 +6,7 @@ $nom = $_POST['nom'];
 // Vérifier, valider, nettoyer les données postées par un utilisateur pas forcément gentil
 
 
-// Enregistrement des données dans la table user de notre base de données
+// Données de connexion au serveur de bases de données
 $servname = 'localhost:8889';
 $dbname = 'php_test';
 $user = 'root';
