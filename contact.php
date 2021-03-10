@@ -15,6 +15,14 @@
             <?php echo "Contact"; ?>
         </h1>
 
+        <?php if(isset($_GET['msg'])) : ?>
+            <?php if($_GET['msg'] == 'erreur'): ?>
+                <p class="error">Une erreur s'est produite ;(</p>
+            <?php else: ?>
+                <p class="success">Tout s'est bien passé \o/</p>
+            <?php endif; ?>
+        <?php endif; ?>
+
         <form method="post" action="php/traitement-contact.php">
             <div class="form-group">
                 <label for="prenom">Votre prénom * :</label>

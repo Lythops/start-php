@@ -5,3 +5,13 @@ html {
 .form-group {
     margin: 0.5rem 0;
 }
+
+.error {
+    font-weight: bold;
+    color: red;
+}
+
+.success {
+    font-weight: bold;
+    color: green;
+}
