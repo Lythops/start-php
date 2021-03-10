@@ -15,6 +15,7 @@
             <?php echo "Contact"; ?>
         </h1>
 
+        <!-- Message de retour de traitement-contact.php -->
         <?php if(isset($_GET['msg'])) : ?>
             <?php if($_GET['msg'] == 'erreur'): ?>
                 <p class="error">Une erreur s'est produite ;(</p>
@@ -23,6 +24,7 @@
             <?php endif; ?>
         <?php endif; ?>
 
+        <!-- Formulaire de contact -->
         <form method="post" action="php/traitement-contact.php">
             <div class="form-group">
                 <label for="prenom">Votre prénom * :</label>
