@@ -1,25 +1,13 @@
 <?php
 // Données de connexion au serveur de bases de données
-$servname = 'localhost:8889';
-$dbname = 'php_test';
-$user = 'root';
-$pass = 'root';
+require_once('php/Class/User.php');
 
-try {
-    // Connexion à la base de données
-    $dbco = new PDO("mysql:host=$servname;dbname=$dbname", $user, $pass);
-    $dbco->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+//on instancie notre classe dans un objet $user
 
-    // Récupération des données en bdd
-    $req = $dbco->prepare('SELECT * FROM user where id=2;');
-    $req->execute();
+$user = new User();
 
-    // Mise des résultats dans un tableau tout propre tout beau
-    $result = $req->fetch(PDO::FETCH_ASSOC);
-
-} catch(PDOException $e) {
-    $_GET['msg'] = 'erreur';
-}
+//on appelle une méthode de notre objet
+$result = $user->getUser(1);
 ?>
 
 <!DOCTYPE html>
